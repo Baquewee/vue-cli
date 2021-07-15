@@ -1,7 +1,7 @@
 <template>
   <div class="events">
+    <h1>Events For Good</h1>
     <EventCard v-for="event in events" :key="event.id" :event="event" />
-    <Organizer v-for="event in events" :key="event.id" :event="event"/>
   </div>
 </template>
 
@@ -12,24 +12,21 @@
   align-items: center;
 }
 
-.Organizer{
+.Organizer {
   display: flex;
   flex-direction: column;
   text-align: right;
 }
-
 </style>
 
 <script>
 // @ is an alias to /src
 import EventCard from '@/components/EventCard.vue'
-import Organizer from '@/components/Organizer.vue'
 
 export default {
-  name: 'Home',
+  name: 'Eventlist',
   components: {
     EventCard, //reg as cgild component
-    Organizer
   },
   data() {
     return {
